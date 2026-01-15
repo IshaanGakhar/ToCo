@@ -240,7 +240,8 @@ def train(args=None):
     avg_meter = AverageMeter()
 
 
-    loss_layer = DenseEnergyLoss(weight=1e-7, sigma_rgb=15, sigma_xy=100, scale_factor=0.5)
+    # loss_layer = DenseEnergyLoss(weight=1e-7, sigma_rgb=15, sigma_xy=100, scale_factor=0.5)
+    loss_layer = 0.0
     ncrops = 10
     CTC_loss = CTCLoss_neg(ncrops=ncrops, temp=1.0).cuda()
 
