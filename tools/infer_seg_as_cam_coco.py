@@ -8,7 +8,7 @@ from collections import OrderedDic
 import numpy as np
 import torch
 import torch.nn.functional as F
-from datasets import coco
+from DS import coco
 from model.model_seg_neg import network
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -22,7 +22,7 @@ parser.add_argument("--backbone", default='vit_base_patch16_224', type=str, help
 parser.add_argument("--pooling", default='gmp', type=str, help="pooling choice for patch tokens")
 parser.add_argument("--img_folder", default='../../coco2014', type=str, help="dataset folder")
 parser.add_argument("--label_folder", default='../../MSCOCO/SegmentationClass', type=str, help="dataset folder")
-parser.add_argument("--list_folder", default='datasets/coco', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/coco', type=str, help="train/val/test list file")
 parser.add_argument("--num_classes", default=81, type=int, help="number of classes")
 parser.add_argument("--ignore_index", default=255, type=int, help="random index")
 parser.add_argument("--infer_set", default="val_part", type=str, help="infer_set")

@@ -18,7 +18,7 @@ from utils.evaluate import scores
 from utils.imutils import encode_cmap
 parser = argparse.ArgumentParser()
 parser.add_argument("--root_dir", default='../VOCdevkit/VOC2012', type=str, help="root_dir")
-parser.add_argument("--txt_dir", default='datasets/voc/', type=str, help="txt_dir")
+parser.add_argument("--txt_dir", default='DS/voc/', type=str, help="txt_dir")
 parser.add_argument("--eval_set", default='val', type=str, help="eval_set")
 parser.add_argument("--cam_path", default='.', type=str, help="logit")
 parser.add_argument("--dst_dir", default='cam_label_crf2', type=str, help="dst")

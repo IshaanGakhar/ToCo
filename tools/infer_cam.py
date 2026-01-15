@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn.functional as F
-from datasets import voc
+from DS import voc
 from model.model_seg_neg import network
 # from omegaconf import OmegaConf
 from torch.utils.data import DataLoader
@@ -29,7 +29,7 @@ parser.add_argument("--pooling", default='gmp', type=str, help="pooling choice f
 parser.add_argument("--pretrained", default=True, type=bool, help="use imagenet pretrained weights")
 
 parser.add_argument("--data_folder", default='../VOCdevkit/VOC2012', type=str, help="dataset folder")
-parser.add_argument("--list_folder", default='datasets/voc', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/voc', type=str, help="train/val/test list file")
 parser.add_argument("--num_classes", default=21, type=int, help="number of classes")
 parser.add_argument("--ignore_index", default=255, type=int, help="random index")
 parser.add_argument("--infer_set", default="val", type=str, help="infer_set")

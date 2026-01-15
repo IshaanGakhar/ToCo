@@ -23,7 +23,7 @@ parser.add_argument("--bkg_thre_h", default=0.5, type=float, help='bkg_thre')
 parser.add_argument("--bkg_thre_l", default=0.25, type=float, help='bkg_thre')
 parser.add_argument("--img_folder", default='../../coco2014', type=str, help="dataset folder")
 parser.add_argument("--label_folder", default='../../MSCOCO/SegmentationClass', type=str, help="dataset folder")
-parser.add_argument("--list_folder", default='datasets/coco', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/coco', type=str, help="train/val/test list file")
 parser.add_argument("--save_label", action="store_true", default=False, help='save crf label')
 
 def robust_read_image(image_name):

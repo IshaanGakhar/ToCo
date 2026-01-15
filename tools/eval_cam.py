@@ -6,14 +6,14 @@ sys.path.append(".")
 
 import imageio
 import numpy as np
-from datasets import voc
+from DS import voc
 from tqdm import tqdm
 from utils.evaluate import scores
 from utils.pyutils import format_tabs
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--eval_set", default='val', type=str, help="eval set")
-parser.add_argument("--list_folder", default='datasets/voc', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/voc', type=str, help="train/val/test list file")
 parser.add_argument("--cam_folder", default='.', type=str, help="logit")
 parser.add_argument("--data_folder", default='../VOCdevkit/VOC2012', type=str, help="dataset folder")
 parser.add_argument("--bkg_thre", default=0.5, type=float, help="bkg_thre")

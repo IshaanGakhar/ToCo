@@ -11,7 +11,7 @@ import numpy as np
 import torch
 import torch.distributed as dist
 import torch.nn.functional as F
-from datasets import voc as voc
+from DS import voc as voc
 from model.losses import get_masked_ptc_loss, get_seg_loss, CTCLoss_neg, DenseEnergyLoss, get_energy_loss
 from model.model_seg_neg import network
 from torch.nn.parallel import DistributedDataParallel
@@ -30,7 +30,7 @@ parser.add_argument("--pooling", default='gmp', type=str, help="pooling choice f
 parser.add_argument("--pretrained", default=True, type=bool, help="use imagenet pretrained weights")
 
 parser.add_argument("--data_folder", default='../VOCdevkit/VOC2012', type=str, help="dataset folder")
-parser.add_argument("--list_folder", default='datasets/voc', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/voc', type=str, help="train/val/test list file")
 parser.add_argument("--num_classes", default=21, type=int, help="number of classes")
 parser.add_argument("--crop_size", default=448, type=int, help="crop_size in training")
 parser.add_argument("--local_crop_size", default=96, type=int, help="crop_size for local view")

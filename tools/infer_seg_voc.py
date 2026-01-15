@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn.functional as F
-from datasets import voc
+from DS import voc
 from model.model_seg_neg import network
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -27,7 +27,7 @@ parser.add_argument("--model_path", default="workdir_ablation_vitl-mmt/2022-11-0
 
 parser.add_argument("--backbone", default='vit_base_patch16_224', type=str, help="vit_base_patch16_224")
 parser.add_argument("--data_folder", default='../VOCdevkit/VOC2012', type=str, help="dataset folder")
-parser.add_argument("--list_folder", default='datasets/voc', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/voc', type=str, help="train/val/test list file")
 parser.add_argument("--num_classes", default=21, type=int, help="number of classes")
 parser.add_argument("--ignore_index", default=255, type=int, help="random index")
 parser.add_argument("--scales", default=(1.0, 1.5, 1.25), help="multi_scales for seg")

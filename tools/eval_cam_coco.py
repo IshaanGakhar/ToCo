@@ -6,7 +6,7 @@ sys.path.append(".")
 
 import imageio
 import numpy as np
-from datasets import coco as coco
+from DS import coco as coco
 from tqdm import tqdm
 from utils.evaluate import scores
 from utils.pyutils import format_tabs
@@ -18,7 +18,7 @@ parser.add_argument("--data_folder", default='../../VOCdevkit/VOC2012', type=str
 parser.add_argument("--bkg_thre", default=0.4, type=float, help="bkg_thre")
 parser.add_argument("--img_folder", default='../../coco2014', type=str, help="dataset folder")
 parser.add_argument("--label_folder", default='../../MSCOCO/SegmentationClass', type=str, help="dataset folder")
-parser.add_argument("--list_folder", default='datasets/coco', type=str, help="train/val/test list file")
+parser.add_argument("--list_folder", default='DS/coco', type=str, help="train/val/test list file")
 args = parser.parse_args()
 
 def load_txt(txt_name):
