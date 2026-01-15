@@ -68,7 +68,7 @@ parser.add_argument("--momentum", default=0.9, type=float, help="temp")
 parser.add_argument("--seed", default=0, type=int, help="fix random seed")
 parser.add_argument("--save_ckpt", action="store_true", help="save_ckpt")
 
-parser.add_argument("--local_rank", default=-1, type=int, help="local_rank")
+parser.add_argument("--local-rank", dest='local_rank', default=-1, type=int, help="local rank")
 parser.add_argument("--num_workers", default=10, type=int, help="num_workers")
 parser.add_argument('--backend', default='nccl')
 
