@@ -11,14 +11,14 @@ import numpy as np
 import torch
 import torch.distributed as dist
 import torch.nn.functional as F
-from .datasets import coco as coco
-from .model.losses import CTCLoss_neg, get_masked_ptc_loss, get_seg_loss, DenseEnergyLoss, get_energy_loss
-from .model.model_seg_neg import network
+from datasets import coco as coco
+from model.losses import CTCLoss_neg, get_masked_ptc_loss, get_seg_loss, DenseEnergyLoss, get_energy_loss
+from model.model_seg_neg import network
 from torch.nn.parallel import DistributedDataParallel
 from torch.utils.data import DataLoader
 from torch.utils.data.distributed import DistributedSampler
 from tqdm import tqdm
-from .model.PAR import PAR
+from model.PAR import PAR
 from utils import evaluate, imutils, optimizer
 from utils.camutils import cam_to_label, cam_to_roi_mask2, crop_from_roi_neg, multi_scale_cam2, label_to_aff_mask, refine_cams_with_bkg_v2
 from utils.pyutils import AverageMeter, cal_eta, format_tabs, setup_logger
