@@ -241,7 +241,7 @@ def train(args=None):
 
 
     # loss_layer = DenseEnergyLoss(weight=1e-7, sigma_rgb=15, sigma_xy=100, scale_factor=0.5)
-    loss_layer = lambda *args, **kwargs: torch.tensor(0.0, device='cuda')
+    loss_layer = lambda *args, **kwargs: torch.zeros(1, device=args[1].device)
     ncrops = 10
     CTC_loss = CTCLoss_neg(ncrops=ncrops, temp=1.0).cuda()
 
